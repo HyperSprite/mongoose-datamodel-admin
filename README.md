@@ -1,7 +1,10 @@
 #Mongoose Data Model Admin
 
+
 ----------
 The Mongoose Data Model Admin is a tool for creating and managing mongoose schema. You can use it for a new project in a data first model or you can use it to document an existing project to keep everyone and everything on the same page.
+
+Another use for this is for building views based entirely on data. Instead of describing each view in the handler, you could describe it with the data.
 
 I'll be the first to tell you I am no expert at this. I built this tool because I wanted one to work the way I thought about schema and data usage.
 
@@ -33,6 +36,7 @@ We can start with a vanilla Express app. As with most dev projects, we are going
  - dmMax - Number: Max value or length
  - dmOptions - Array of Sub Documents : Used for constrained value fields, should be an array of objects. e.g. [{name: foo, value: 1}, {name:bar, value: 2}. Consider carefully if a field will contain a readable value or a reference to a value. Both have their advantages and disadvantages. For instance, if we use a reference value, we will need to lookup the real value every time we need to display that value. Also, what is the likely hood of that value needing to change?
  - dmDescription - String : Explain what this is for and why it exists to devs.
+ - dmViews - Array of Sub Documents : For computed views, [{viewName: (name of view this describes), viewOrder (Order to be displayed on the page), viewAccess (is it read, edit, delete)
  - dmHelp - String : Explain what this is for and how to use it to end users.
  - dmReff - Array : is this field referenced by another field or schema.
  - dmLookup - Array : is this field looked up by another field or schema.
@@ -64,9 +68,3 @@ Other Routes:
 
  - datamodel/model/:dmSchemaName - Displays the schema based on the fields.
  - help/fields - displays the dmHelp with Display Name and user help
-
-
-
-
-
-
