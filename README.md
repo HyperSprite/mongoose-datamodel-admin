@@ -1,6 +1,3 @@
-# mongoose-datamodel-admin
-
-----------
 #Mongoose Data Model Admin
 
 
