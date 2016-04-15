@@ -1,6 +1,5 @@
 #Mongoose Data Model Admin
 
-
 ----------
 The Mongoose Data Model Admin is a tool for creating and managing mongoose schema. You can use it for a new project in a data first model or you can use it to document an existing project to keep everyone and everything on the same page.
 
@@ -52,15 +51,22 @@ Once we define the schema for our schema definition we can go to the view to get
 
 Using typical Rest routes:
 
-get datamodel/ : datamodel.find() - returns all field definitions with all fields
-get datamodel/new : form only - returns form to make new field definition
-post datamodel/ datamodel.create - post a new field definition
-get datamodel/:id datamodel.findById - returns one field definition
-get datamodel/:id/edit datamodel. findById - returns edit view of field definition
-put datamodel/:id datamodel.findByIdAndUpdate - updates a field definition
-delete datamodel/:id datamodel.findByIdAndRemove - delete a field definition
+ - get datamodel/ : datamodel.find() - returns all field definitions with all fields
+ - get datamodel/new : form only - returns form to make new field definition
+ - post datamodel/ datamodel.create - post a new field definition
+ - get datamodel/:id datamodel.findById - returns one field definition
+ - get datamodel/:id/edit datamodel. findById - returns edit view of field definition
+ - put datamodel/:id datamodel.findByIdAndUpdate - updates a field definition
+ - delete datamodel/:id datamodel.findByIdAndRemove - delete a field definition
+
 
 Other Routes:
 
-datamodel/model/:dmSchemaName - Displays the schema based on the fields.
-help/fields - displays the dmHelp with Display Name and user help
+ - datamodel/model/:dmSchemaName - Displays the schema based on the fields.
+ - help/fields - displays the dmHelp with Display Name and user help
+
+
+
+
+
+
